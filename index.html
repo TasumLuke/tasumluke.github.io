@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    /* Add new CSS rules for the "loading..." text */
+
+    .loading-text {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 3px;
+      margin-left:200px;
+    }
+
+    .loading-joke {
+      animation: color-change 5s infinite;
+    }
+
+    /* Animation for the color change effect */
+    @keyframes color-change {
+      0% {
+        color: #FF00FF; /* Starting color */
+      }
+      50% {
+        color: #00FFFF; /* Middle color */
+      }
+      100% {
+        color: #FF00FF; /* Ending color */
+      }
+      40% {
+        color: #ff3300; /* Ending color */
+      }
+      30% {
+        color: #396cbe; /* Ending color */
+      }
+      20% {
+        color: #61423a; /* Ending color */
+      }
+      10% {
+        color: #432e3e; /* Ending color */
+      }
+      5% {
+        color: #ab981f; /* Ending color */
+      }
+      60% {
+        color: #e8ee32; /* Ending color */
+      }
+    }
+  </style>
+
+  <title>Helix CSS Loader</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <div class="loader">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+</div>
+
+<div class="loading-text">
+  <span class="loading-joke">Loading... my DNA</span>
+  
+</div>
+  
+<script>
+  // JavaScript code to change the color of the joke text randomly
+  const jokeText = document.querySelectorAll(".loading-joke");
+
+  setInterval(() => {
+    jokeText.forEach((text) => {
+      const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+      text.style.color = randomColor;
+    });
+  }, 3000); // Change color every 3 seconds (adjust as needed)
+</script>
+</body>
+<script>
+  setTimeout(function() {
+    window.location.href = "home.html";
+  }, 10000); // 60000 milliseconds = 1 minute
+</script>
+
+</html>
